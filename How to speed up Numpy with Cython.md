@@ -47,14 +47,14 @@ compute_np_time = timeit.timeit(lambda: compute_np(array_1, array_2, a, b, c), n
 print("compute_np execution time:", compute_np_time)
 ```
 
-    [[ 85 214 301 ... 133  73 295]
-     [214 235 190 ...  73 283 298]
-     [232 205 286 ... 157 244 328]
+    [[ 85 127 241 ... 328  52 160]
+     [196 160 343 ... 286 127 280]
+     [169 109  94 ... 175 214 222]
      ...
-     [193 310 145 ... 223 209 111]
-     [130 340 160 ... 142 247  70]
-     [310 205  85 ... 156 163  97]]
-    compute_np execution time: 0.05985913000004075
+     [253 163 325 ...  94 259 229]
+     [133 308 190 ... 325 151 202]
+     [178 331 281 ...  52 124 263]]
+    compute_np execution time: 0.05866470000000845
     
 
 # 4. The code for pure Python
@@ -92,14 +92,14 @@ compute_py_time = timeit.timeit(lambda: compute_py(array_1, array_2, a, b, c), n
 print("compute_py execution time:", compute_py_time)
 ```
 
-    [[ 85 214 301 ... 133  73 295]
-     [214 235 190 ...  73 283 298]
-     [232 205 286 ... 157 244 328]
+    [[ 85 127 241 ... 328  52 160]
+     [196 160 343 ... 286 127 280]
+     [169 109  94 ... 175 214 222]
      ...
-     [193 310 145 ... 223 209 111]
-     [130 340 160 ... 142 247  70]
-     [310 205  85 ... 156 163  97]]
-    compute_py execution time: 10.85603258000001
+     [253 163 325 ...  94 259 229]
+     [133 308 190 ... 325 151 202]
+     [178 331 281 ...  52 124 263]]
+    compute_py execution time: 10.784624809999878
     
 
 ## 4.1 Compare
@@ -144,40 +144,40 @@ HTML(styled_df.to_html())
 
 
 <style type="text/css">
-#T_0ee62 table {
+#T_53ec3 table {
   border-collapse: collapse;
 }
-#T_0ee62 th {
+#T_53ec3 th {
   border: 1px solid black;
 }
-#T_0ee62  td {
+#T_53ec3  td {
   border: 1px solid black;
 }
-#T_0ee62_row0_col0, #T_0ee62_row0_col1, #T_0ee62_row0_col2, #T_0ee62_row1_col0, #T_0ee62_row1_col1, #T_0ee62_row1_col2 {
+#T_53ec3_row0_col0, #T_53ec3_row0_col1, #T_53ec3_row0_col2, #T_53ec3_row1_col0, #T_53ec3_row1_col1, #T_53ec3_row1_col2 {
   border: 1px solid black;
 }
 </style>
-<table id="T_0ee62">
+<table id="T_53ec3">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_0ee62_level0_col0" class="col_heading level0 col0" >Methods</th>
-      <th id="T_0ee62_level0_col1" class="col_heading level0 col1" >Speed(s)</th>
-      <th id="T_0ee62_level0_col2" class="col_heading level0 col2" >Percentage(%)</th>
+      <th id="T_53ec3_level0_col0" class="col_heading level0 col0" >Methods</th>
+      <th id="T_53ec3_level0_col1" class="col_heading level0 col1" >Speed(s)</th>
+      <th id="T_53ec3_level0_col2" class="col_heading level0 col2" >Percentage(%)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_0ee62_level0_row0" class="row_heading level0 row0" >0</th>
-      <td id="T_0ee62_row0_col0" class="data row0 col0" >Numpy</td>
-      <td id="T_0ee62_row0_col1" class="data row0 col1" >0.059859</td>
-      <td id="T_0ee62_row0_col2" class="data row0 col2" >100.000000</td>
+      <th id="T_53ec3_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_53ec3_row0_col0" class="data row0 col0" >Numpy</td>
+      <td id="T_53ec3_row0_col1" class="data row0 col1" >0.058665</td>
+      <td id="T_53ec3_row0_col2" class="data row0 col2" >100.000000</td>
     </tr>
     <tr>
-      <th id="T_0ee62_level0_row1" class="row_heading level0 row1" >1</th>
-      <td id="T_0ee62_row1_col0" class="data row1 col0" >Pure Python</td>
-      <td id="T_0ee62_row1_col1" class="data row1 col1" >10.856033</td>
-      <td id="T_0ee62_row1_col2" class="data row1 col2" >0.551390</td>
+      <th id="T_53ec3_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_53ec3_row1_col0" class="data row1 col0" >Pure Python</td>
+      <td id="T_53ec3_row1_col1" class="data row1 col1" >10.784625</td>
+      <td id="T_53ec3_row1_col2" class="data row1 col2" >0.543966</td>
     </tr>
   </tbody>
 </table>
@@ -234,14 +234,14 @@ compute_cy_time = timeit.timeit(lambda: compute_cy(array_1, array_2, a, b, c), n
 print("compute_cy execution time:", compute_cy_time)
 ```
 
-    [[ 49 148 274 ... 121 250 250]
-     [328 175 220 ... 296  73 190]
-     [112  88 223 ... 205 148 199]
+    [[205  70 121 ... 130  64 304]
+     [169 262  85 ... 295 232 181]
+     [338 346  79 ... 295 100 139]
      ...
-     [220  35 307 ... 253 256 328]
-     [292 199 247 ...  52 316  67]
-     [187  85 196 ... 316 136 337]]
-    compute_cy execution time: 8.782663859999957
+     [241 301 166 ... 193 235 289]
+     [120 205 105 ... 223  85 103]
+     [178  70  94 ... 109 130  55]]
+    compute_cy execution time: 8.321111910000036
     
 
 ### 5.1.1 Compare
@@ -283,46 +283,46 @@ HTML(styled_df.to_html())
 
 
 <style type="text/css">
-#T_11b8d table {
+#T_873e0 table {
   border-collapse: collapse;
 }
-#T_11b8d th {
+#T_873e0 th {
   border: 1px solid black;
 }
-#T_11b8d  td {
+#T_873e0  td {
   border: 1px solid black;
 }
-#T_11b8d_row0_col0, #T_11b8d_row0_col1, #T_11b8d_row0_col2, #T_11b8d_row1_col0, #T_11b8d_row1_col1, #T_11b8d_row1_col2, #T_11b8d_row2_col0, #T_11b8d_row2_col1, #T_11b8d_row2_col2 {
+#T_873e0_row0_col0, #T_873e0_row0_col1, #T_873e0_row0_col2, #T_873e0_row1_col0, #T_873e0_row1_col1, #T_873e0_row1_col2, #T_873e0_row2_col0, #T_873e0_row2_col1, #T_873e0_row2_col2 {
   border: 1px solid black;
 }
 </style>
-<table id="T_11b8d">
+<table id="T_873e0">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_11b8d_level0_col0" class="col_heading level0 col0" >Methods</th>
-      <th id="T_11b8d_level0_col1" class="col_heading level0 col1" >Speed(s)</th>
-      <th id="T_11b8d_level0_col2" class="col_heading level0 col2" >Percentage(%)</th>
+      <th id="T_873e0_level0_col0" class="col_heading level0 col0" >Methods</th>
+      <th id="T_873e0_level0_col1" class="col_heading level0 col1" >Speed(s)</th>
+      <th id="T_873e0_level0_col2" class="col_heading level0 col2" >Percentage(%)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_11b8d_level0_row0" class="row_heading level0 row0" >0</th>
-      <td id="T_11b8d_row0_col0" class="data row0 col0" >Numpy</td>
-      <td id="T_11b8d_row0_col1" class="data row0 col1" >0.059859</td>
-      <td id="T_11b8d_row0_col2" class="data row0 col2" >100.000000</td>
+      <th id="T_873e0_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_873e0_row0_col0" class="data row0 col0" >Numpy</td>
+      <td id="T_873e0_row0_col1" class="data row0 col1" >0.058665</td>
+      <td id="T_873e0_row0_col2" class="data row0 col2" >100.000000</td>
     </tr>
     <tr>
-      <th id="T_11b8d_level0_row1" class="row_heading level0 row1" >1</th>
-      <td id="T_11b8d_row1_col0" class="data row1 col0" >Pure Python</td>
-      <td id="T_11b8d_row1_col1" class="data row1 col1" >10.856033</td>
-      <td id="T_11b8d_row1_col2" class="data row1 col2" >0.551390</td>
+      <th id="T_873e0_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_873e0_row1_col0" class="data row1 col0" >Pure Python</td>
+      <td id="T_873e0_row1_col1" class="data row1 col1" >10.784625</td>
+      <td id="T_873e0_row1_col2" class="data row1 col2" >0.543966</td>
     </tr>
     <tr>
-      <th id="T_11b8d_level0_row2" class="row_heading level0 row2" >2</th>
-      <td id="T_11b8d_row2_col0" class="data row2 col0" >Cython</td>
-      <td id="T_11b8d_row2_col1" class="data row2 col1" >8.782664</td>
-      <td id="T_11b8d_row2_col2" class="data row2 col2" >0.681560</td>
+      <th id="T_873e0_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_873e0_row2_col0" class="data row2 col0" >Cython</td>
+      <td id="T_873e0_row2_col1" class="data row2 col1" >8.321112</td>
+      <td id="T_873e0_row2_col2" class="data row2 col2" >0.705010</td>
     </tr>
   </tbody>
 </table>
@@ -1450,14 +1450,14 @@ compute_cy_t_time = timeit.timeit(lambda: compute_cy_t(array_1, array_2, a, b, c
 print("compute_cy_t execution time:", compute_cy_t_time)
 ```
 
-    [[286 247 136 ...  76 260  58]
-     [241  91 112 ... 217 313 151]
-     [121  97 112 ... 331 208 206]
+    [[100 250 319 ...  63 334 283]
+     [191 250 172 ... 346 136 240]
+     [298 337 281 ... 139 106 115]
      ...
-     [238 343 244 ... 121 169 295]
-     [340  49 217 ... 331 175 334]
-     [241  17 286 ... 220 289 328]]
-    compute_cy_t execution time: 5.1073419600000305
+     [238  97 166 ...  73  70 250]
+     [127 289 226 ... 196  73 256]
+     [109 217 163 ...  21  41 160]]
+    compute_cy_t execution time: 5.123431210000126
     
 
 ## 5.3 Efficient indexing with memoryviews
@@ -1531,14 +1531,14 @@ compute_cy_m_time = timeit.timeit(lambda: compute_cy_m(array_1, array_2, a, b, c
 print("compute_cy_m execution time:", compute_cy_m_time)
 ```
 
-    [[244 235 343 ...  85 262 105]
-     [331 133 235 ...  73 190 184]
-     [163 190 280 ... 331 346 235]
+    [[235 173 139 ... 133  82 286]
+     [301 322 256 ...  91  36 235]
+     [343  85 235 ... 317 283 190]
      ...
-     [289 115 205 ... 109 124 127]
-     [238 289 196 ... 100 127 289]
-     [229 238 292 ... 235 211 256]]
-    compute_cy_m execution time: 0.04335860000001048
+     [ 55  76 253 ... 193 217 235]
+     [292 238 292 ... 199 103 301]
+     [133 124 289 ...  68 232 310]]
+    compute_cy_m execution time: 0.037777249999999186
     
 
 Here we can see how much faster it has become。
@@ -1614,14 +1614,14 @@ compute_cy_i_time = timeit.timeit(lambda: compute_cy_i(array_1, array_2, a, b, c
 print("compute_cy_i execution time:", compute_cy_i_time)
 ```
 
-    [[145 229  88 ... 181  76 148]
-     [103 314  55 ... 312  94  94]
-     [298 220 250 ... 136 220 220]
+    [[187 259  94 ...  79 190 142]
+     [154 178 175 ... 304 217 307]
+     [106 331 346 ... 313 103 130]
      ...
-     [214 340 268 ... 133 259  91]
-     [301 103  73 ... 307 310 250]
-     [229 142 247 ... 301 301 109]]
-    compute_cy_i execution time: 0.016176019999966228
+     [ 85 280 313 ... 208  73  85]
+     [298 256  85 ... 274 260 247]
+     [ 82 322 244 ... 241 157 181]]
+    compute_cy_i execution time: 0.014358759999959147
     
 
 ## 5.3 Declaring the NumPy arrays as contiguous
@@ -1692,14 +1692,14 @@ compute_cy_c_time = timeit.timeit(lambda: compute_cy_c(array_1, array_2, a, b, c
 print("compute_cy_c execution time:", compute_cy_c_time)
 ```
 
-    [[241 226  91 ...  79 142 163]
-     [290  79 157 ... 218 259 118]
-     [232  82 337 ... 292  70 109]
+    [[283 109 244 ...  58  61 328]
+     [ 85 142 331 ... 145 346 259]
+     [202 235 109 ... 169 280  52]
      ...
-     [178 277 301 ... 101  55 268]
-     [289 223  79 ... 154 322 328]
-     [107  64  50 ... 130 103  94]]
-    compute_cy_c execution time: 0.014305520000016258
+     [325 232 271 ... 151  87 202]
+     [ 52  73 295 ... 247 235 286]
+     [232 268 127 ... 196 136 211]]
+    compute_cy_c execution time: 0.014614970000002359
     
 
 Obviously, this optimization doesn't work here.
@@ -1790,14 +1790,14 @@ compute_cy_mdt_time = timeit.timeit(lambda: compute_cy_mdt(array_1, array_2, a, 
 print("compute_cy_mdt execution time:", compute_cy_mdt_time)
 ```
 
-    [[253 328  61 ... 306 175 150]
-     [286 325 124 ... 208 291 178]
-     [268 343 259 ... 253 223 247]
+    [[109 337 268 ...  55 316 184]
+     [226 157 310 ... 274 273 258]
+     [256 328  61 ...  82 241 259]
      ...
-     [304 181 169 ...  64 274 208]
-     [205 229 199 ... 235 346 301]
-     [199 240 121 ... 283 241 160]]
-    compute_cy_mdt execution time: 0.015600460000041495
+     [154 274 328 ... 340 262 217]
+     [304 100  55 ... 256 334 148]
+     [ 58 170 289 ... 226 274  91]]
+    compute_cy_mdt execution time: 0.014951370000017051
     
 
 ## 5.5 Using multiple threads
@@ -1883,14 +1883,14 @@ compute_cy_mt_time = timeit.timeit(lambda: compute_cy_mt(array_1, array_2, a, b,
 print("compute_cy_mt execution time:", compute_cy_mt_time)
 ```
 
-    [[130 129  91 ... 154 178 169]
-     [211 238 256 ... 172 259 115]
-     [ 94 274 241 ... 289 100 166]
+    [[274 322 337 ... 280 192 262]
+     [130 200 277 ... 121 307 304]
+     [ 76 124  59 ... 184 256 265]
      ...
-     [241 316 181 ... 265 331 319]
-     [307 250 226 ... 205  55 328]
-     [244 190  97 ... 148 118 136]]
-    compute_cy_mt execution time: 0.03052721999993082
+     [169  38 340 ... 175 247 328]
+     [325 337 319 ... 180 328 283]
+     [252  97 285 ... 193  69 169]]
+    compute_cy_mt execution time: 0.04007001999998465
     
 
 Parallel computing does not necessarily lead to an eventual speed increase, and the reasons for this can be varied. For example, Parallelizing operations incurs additional overhead, such as thread creation and synchronization, that may outweigh the benefits of parallelism for small or simple operations.
@@ -3930,82 +3930,82 @@ HTML(styled_df.to_html())
 
 
 <style type="text/css">
-#T_1b538 table {
+#T_0de2c table {
   border-collapse: collapse;
 }
-#T_1b538 th {
+#T_0de2c th {
   border: 1px solid black;
 }
-#T_1b538  td {
+#T_0de2c  td {
   border: 1px solid black;
 }
-#T_1b538_row0_col0, #T_1b538_row0_col1, #T_1b538_row0_col2, #T_1b538_row1_col0, #T_1b538_row1_col1, #T_1b538_row1_col2, #T_1b538_row2_col0, #T_1b538_row2_col1, #T_1b538_row2_col2, #T_1b538_row3_col0, #T_1b538_row3_col1, #T_1b538_row3_col2, #T_1b538_row4_col0, #T_1b538_row4_col1, #T_1b538_row4_col2, #T_1b538_row5_col0, #T_1b538_row5_col1, #T_1b538_row5_col2, #T_1b538_row6_col0, #T_1b538_row6_col1, #T_1b538_row6_col2, #T_1b538_row7_col0, #T_1b538_row7_col1, #T_1b538_row7_col2, #T_1b538_row8_col0, #T_1b538_row8_col1, #T_1b538_row8_col2 {
+#T_0de2c_row0_col0, #T_0de2c_row0_col1, #T_0de2c_row0_col2, #T_0de2c_row1_col0, #T_0de2c_row1_col1, #T_0de2c_row1_col2, #T_0de2c_row2_col0, #T_0de2c_row2_col1, #T_0de2c_row2_col2, #T_0de2c_row3_col0, #T_0de2c_row3_col1, #T_0de2c_row3_col2, #T_0de2c_row4_col0, #T_0de2c_row4_col1, #T_0de2c_row4_col2, #T_0de2c_row5_col0, #T_0de2c_row5_col1, #T_0de2c_row5_col2, #T_0de2c_row6_col0, #T_0de2c_row6_col1, #T_0de2c_row6_col2, #T_0de2c_row7_col0, #T_0de2c_row7_col1, #T_0de2c_row7_col2, #T_0de2c_row8_col0, #T_0de2c_row8_col1, #T_0de2c_row8_col2 {
   border: 1px solid black;
 }
 </style>
-<table id="T_1b538">
+<table id="T_0de2c">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_1b538_level0_col0" class="col_heading level0 col0" >Methods</th>
-      <th id="T_1b538_level0_col1" class="col_heading level0 col1" >Speed(s)</th>
-      <th id="T_1b538_level0_col2" class="col_heading level0 col2" >Percentage(%)</th>
+      <th id="T_0de2c_level0_col0" class="col_heading level0 col0" >Methods</th>
+      <th id="T_0de2c_level0_col1" class="col_heading level0 col1" >Speed(s)</th>
+      <th id="T_0de2c_level0_col2" class="col_heading level0 col2" >Percentage(%)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_1b538_level0_row0" class="row_heading level0 row0" >0</th>
-      <td id="T_1b538_row0_col0" class="data row0 col0" >Numpy</td>
-      <td id="T_1b538_row0_col1" class="data row0 col1" >0.059859</td>
-      <td id="T_1b538_row0_col2" class="data row0 col2" >100.000000</td>
+      <th id="T_0de2c_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_0de2c_row0_col0" class="data row0 col0" >Numpy</td>
+      <td id="T_0de2c_row0_col1" class="data row0 col1" >0.058665</td>
+      <td id="T_0de2c_row0_col2" class="data row0 col2" >100.000000</td>
     </tr>
     <tr>
-      <th id="T_1b538_level0_row1" class="row_heading level0 row1" >1</th>
-      <td id="T_1b538_row1_col0" class="data row1 col0" >Pure Python</td>
-      <td id="T_1b538_row1_col1" class="data row1 col1" >10.856033</td>
-      <td id="T_1b538_row1_col2" class="data row1 col2" >0.551390</td>
+      <th id="T_0de2c_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_0de2c_row1_col0" class="data row1 col0" >Pure Python</td>
+      <td id="T_0de2c_row1_col1" class="data row1 col1" >10.784625</td>
+      <td id="T_0de2c_row1_col2" class="data row1 col2" >0.543966</td>
     </tr>
     <tr>
-      <th id="T_1b538_level0_row2" class="row_heading level0 row2" >2</th>
-      <td id="T_1b538_row2_col0" class="data row2 col0" >Original Cython</td>
-      <td id="T_1b538_row2_col1" class="data row2 col1" >8.782664</td>
-      <td id="T_1b538_row2_col2" class="data row2 col2" >0.681560</td>
+      <th id="T_0de2c_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_0de2c_row2_col0" class="data row2 col0" >Original Cython</td>
+      <td id="T_0de2c_row2_col1" class="data row2 col1" >8.321112</td>
+      <td id="T_0de2c_row2_col2" class="data row2 col2" >0.705010</td>
     </tr>
     <tr>
-      <th id="T_1b538_level0_row3" class="row_heading level0 row3" >3</th>
-      <td id="T_1b538_row3_col0" class="data row3 col0" >Cython_add types</td>
-      <td id="T_1b538_row3_col1" class="data row3 col1" >5.107342</td>
-      <td id="T_1b538_row3_col2" class="data row3 col2" >1.172021</td>
+      <th id="T_0de2c_level0_row3" class="row_heading level0 row3" >3</th>
+      <td id="T_0de2c_row3_col0" class="data row3 col0" >Cython_add types</td>
+      <td id="T_0de2c_row3_col1" class="data row3 col1" >5.123431</td>
+      <td id="T_0de2c_row3_col2" class="data row3 col2" >1.145028</td>
     </tr>
     <tr>
-      <th id="T_1b538_level0_row4" class="row_heading level0 row4" >4</th>
-      <td id="T_1b538_row4_col0" class="data row4 col0" >Cython_memoryviews</td>
-      <td id="T_1b538_row4_col1" class="data row4 col1" >0.043359</td>
-      <td id="T_1b538_row4_col2" class="data row4 col2" >138.055957</td>
+      <th id="T_0de2c_level0_row4" class="row_heading level0 row4" >4</th>
+      <td id="T_0de2c_row4_col0" class="data row4 col0" >Cython_memoryviews</td>
+      <td id="T_0de2c_row4_col1" class="data row4 col1" >0.037777</td>
+      <td id="T_0de2c_row4_col2" class="data row4 col2" >155.291081</td>
     </tr>
     <tr>
-      <th id="T_1b538_level0_row5" class="row_heading level0 row5" >5</th>
-      <td id="T_1b538_row5_col0" class="data row5 col0" >Cython_tuning indexing</td>
-      <td id="T_1b538_row5_col1" class="data row5 col1" >0.016176</td>
-      <td id="T_1b538_row5_col2" class="data row5 col2" >370.048566</td>
+      <th id="T_0de2c_level0_row5" class="row_heading level0 row5" >5</th>
+      <td id="T_0de2c_row5_col0" class="data row5 col0" >Cython_tuning indexing</td>
+      <td id="T_0de2c_row5_col1" class="data row5 col1" >0.014359</td>
+      <td id="T_0de2c_row5_col2" class="data row5 col2" >408.563831</td>
     </tr>
     <tr>
-      <th id="T_1b538_level0_row6" class="row_heading level0 row6" >6</th>
-      <td id="T_1b538_row6_col0" class="data row6 col0" >Cyton_contiguous</td>
-      <td id="T_1b538_row6_col1" class="data row6 col1" >0.014306</td>
-      <td id="T_1b538_row6_col2" class="data row6 col2" >418.433793</td>
+      <th id="T_0de2c_level0_row6" class="row_heading level0 row6" >6</th>
+      <td id="T_0de2c_row6_col0" class="data row6 col0" >Cyton_contiguous</td>
+      <td id="T_0de2c_row6_col1" class="data row6 col1" >0.014615</td>
+      <td id="T_0de2c_row6_col2" class="data row6 col2" >401.401440</td>
     </tr>
     <tr>
-      <th id="T_1b538_level0_row7" class="row_heading level0 row7" >7</th>
-      <td id="T_1b538_row7_col0" class="data row7 col0" >Cython_multiple data types</td>
-      <td id="T_1b538_row7_col1" class="data row7 col1" >0.015600</td>
-      <td id="T_1b538_row7_col2" class="data row7 col2" >383.701058</td>
+      <th id="T_0de2c_level0_row7" class="row_heading level0 row7" >7</th>
+      <td id="T_0de2c_row7_col0" class="data row7 col0" >Cython_multiple data types</td>
+      <td id="T_0de2c_row7_col1" class="data row7 col1" >0.014951</td>
+      <td id="T_0de2c_row7_col2" class="data row7 col2" >392.370064</td>
     </tr>
     <tr>
-      <th id="T_1b538_level0_row8" class="row_heading level0 row8" >8</th>
-      <td id="T_1b538_row8_col0" class="data row8 col0" >Cython_multiple threads</td>
-      <td id="T_1b538_row8_col1" class="data row8 col1" >0.030527</td>
-      <td id="T_1b538_row8_col2" class="data row8 col2" >196.084445</td>
+      <th id="T_0de2c_level0_row8" class="row_heading level0 row8" >8</th>
+      <td id="T_0de2c_row8_col0" class="data row8 col0" >Cython_multiple threads</td>
+      <td id="T_0de2c_row8_col1" class="data row8 col1" >0.040070</td>
+      <td id="T_0de2c_row8_col2" class="data row8 col2" >146.405467</td>
     </tr>
   </tbody>
 </table>
